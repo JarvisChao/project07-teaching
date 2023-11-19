@@ -1,0 +1,15 @@
+mixin artistCard(options)
+  article.l-lineup__artist(class=`${options.size ? `--${options.size}` : ''}`)
+    a.l-lineup__link(href="##" class=`${options.direction ? `--${options.direction}` : ''}` data-aos="fade-up")
+      h3.u-title-md.u-mb-10 #{options.name}
+      //- scalar(10) 設置加速度 / friction(0-1) 設置過渡
+      .js-parallax(data-scalar-y="0" data-friction-x="0.4")
+        //- 原圖
+        .l-lineup__img-mask
+          img.u-object-fit.--abs.js-lazy(data-src=options.img alt=`大港開唱藝人名單 ${options.name}`)
+        //- primary
+        .l-lineup__glitch-mask.--primary(data-depth="0.2")
+          img.u-object-fit.--abs.js-lazy(data-src=options.img alt=`大港開唱藝人名單 ${options.name}`)
+        //- secondary
+        .l-lineup__glitch-mask.--secondary(data-depth="-0.2")
+          img.u-object-fit.--abs.js-lazy(data-src=options.img alt=`大港開唱藝人名單 ${options.name}`)

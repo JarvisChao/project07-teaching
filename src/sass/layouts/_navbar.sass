@@ -1,0 +1,131 @@
+.l-navbar
+  display: flex
+  align-items: center
+  justify-content: space-between
+  position: fixed
+  width: 100%
+  left: 0
+  top: 0
+  padding-left: 4vw
+  border-bottom: 1px solid var(--color-primary)
+  background-color: var(--color-black)
+  box-shadow: 0 4px 60px var(--color-primary)
+  z-index: 999
+  &__logo-mask  
+    max-width: 20rem
+  &__burger
+    &.--mobile
+      display: none
+    &.--desk
+      display: block
+  &__menu
+    display: flex
+    // margin-left: auto
+  &__btn-box
+    display: flex
+  &__btn-box.--icon &
+    &__btn
+      display: flex
+      align-items: center
+      height: 100%
+      padding-left: 1.4vw
+      padding-right: 1.4vw
+      background-color: var(--color-gray-mid40)
+      color: var(--color-gray-light)
+      &::before, &::after
+        background-image: linear-gradient(to bottom, var(--color-secondary), transparent)
+      // &::after
+      //   background-image: linear-gradient(to bottom, var(--color-secondary), transparent)
+  &__btn
+    padding: var(--space-30) 3vw
+    line-height: 1.2
+    color: var(--color-gray-mid)
+    transition: color 0.3s
+    &:hover, &.is-active
+      color: var(--color-gray-light)
+      &::before
+        opacity: 1
+    &::before, &::after
+      content: ''
+      display: block
+      position: absolute
+      left: 0
+      top: 0
+    &::before
+      +size(100%)
+      background-image: linear-gradient(to bottom, var(--color-primary), transparent)
+      opacity: 0
+      transition: opacity 0.3s
+    &::after
+      +size(1px, 100%)
+      // transparent 透明的
+      background-image: linear-gradient(to bottom, var(--color-gray-mid), transparent)
+
+  +media(xxl)
+    &__btn
+      padding-left: 2.4vw
+      padding-right: 2.4vw
+
+  +media(xl)
+    padding: var(--space-20) 4vw
+    &__burger
+      &.--desk
+        display: none
+      &.--mobile
+        display: block
+    // body 單純做收合邏輯
+    // &__burger-ctrl:checked ~ &__body
+    &__body.is-opened
+      height: 100%
+      // overflow: auto
+      // 打開時直接打開，不要 delay
+      transition-delay: 0s
+    // &__burger-ctrl:checked ~ &__body &
+    &__body.is-opened &
+      &__menu
+        transform: translateY(0)
+        opacity: 1
+        transition-delay: 0.7s
+    &__body
+      position: fixed
+      left: 0
+      top: 0
+      +size(100%, 0)
+      background-color: var(--color-black80)
+      overflow: hidden
+      // 關起來時 delay 0.7s
+      // 屬性 duration delay
+      transition: height 0.7s 0.7s
+    // menu 好好調他的樣式
+    &__menu
+      flex-direction: column
+      justify-content: center
+      align-items: center
+      width: 100%
+      min-height: 100%
+      transform: translateY(-2rem)
+      padding: var(--space-60) 0
+      opacity: 0
+      transition: opacity 0.5s, transform 0.5s
+    &__btn-box.--icon
+      margin-top: var(--space-60)
+    &__btn-box.--icon &__btn
+      background-color: transparent
+    &__btn-wrap:first-child &__btn::after
+      display: none
+
+  +media(sm)
+    &__btn-box:not(.--icon)
+      flex-direction: column
+      align-items: center
+      text-align: center
+    &__btn
+      padding: var(--space-20) 4vw
+      &::after
+        display: none
+
+  +media(xs)
+    padding-left: 6vw
+    padding-right: 6vw
+    &__logo-mask
+      max-width: 14rem

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="x-rim-auto-match" content="none">
+    <meta property="og:type" content="website">
+    <link rel="shortcut icon" href="img/logo/logo-icon.png" type="image/png">
+    <link rel="apple-touch-icon" href="img/logo/logo-icon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="css/aos.css">
+    <link rel="stylesheet" href="css/style.css">
+    <meta property="og:url" content="https://jarvischao.github.io/megaport-dev/map.html">
+    <meta property="og:image" content="https://jarvischao.github.io/megaport-dev/img/og/og.jpg">
+    <meta property="og:description" content="輸入單一頁面的網頁描述">
+    <meta name="description" content="輸入單一頁面的網頁描述">
+    <meta property="og:title" content="地圖導覽｜（專案實作）Megaport Festival 大港開唱 2021">
+    <title>地圖導覽｜（專案實作）Megaport Festival 大港開唱 2021</title>
+  </head>
+  <body>
+    <nav class="l-navbar"><a class="l-navbar__logo-mask" href="index.html"><img src="img/logo/logo.svg" alt="Megaport Festival 大港開唱 Logo"></a>
+      <div class="o-burger l-navbar__burger --desk" onclick="burgerCtrl(this)">
+        <div class="o-burger__wrap">
+          <div class="o-burger__line"></div>
+          <div class="o-burger__line"></div>
+          <div class="o-burger__line"></div>
+        </div>
+      </div>
+      <div class="l-navbar__body">
+        <div class="l-navbar__menu">
+          <ul class="l-navbar__btn-box">
+            <li class="l-navbar__btn-wrap"><a class="l-navbar__btn" href="##"><span class="u-ff-en u-text-lg">INFO</span><span>相關資訊</span></a></li>
+            <li class="l-navbar__btn-wrap"><a class="l-navbar__btn" href="#news" onclick="lenis.scrollTo('#news')"><span class="u-ff-en u-text-lg">NEWS</span><span>最新消息</span></a></li>
+            <li class="l-navbar__btn-wrap"><a class="l-navbar__btn" href="##"><span class="u-ff-en u-text-lg">ARTISTS</span><span>藝人名單</span></a></li>
+            <li class="l-navbar__btn-wrap"><a class="l-navbar__btn" href="##"><span class="u-ff-en u-text-lg">TIMETABLE</span><span>節目表</span></a></li>
+            <li class="l-navbar__btn-wrap"><a class="l-navbar__btn" href="##"><span class="u-ff-en u-text-lg">TICKET</span><span>購票資訊</span></a></li>
+            <li class="l-navbar__btn-wrap"><a class="l-navbar__btn" href="map.html"><span class="u-ff-en u-text-lg">MAP</span><span>地圖導覽</span></a></li>
+          </ul>
+          <ul class="l-navbar__btn-box --icon">
+            <li class="l-navbar__btn-wrap"><a class="l-navbar__btn" href="https://www.facebook.com/megaportfest/" target="_blank"><i class="fab fa-facebook u-icon"></i></a></li>
+            <li class="l-navbar__btn-wrap"><a class="l-navbar__btn" href="https://www.instagram.com/megaportfest/" target="_blank"><i class="fab fa-instagram u-icon"></i></a></li>
+            <li class="l-navbar__btn-wrap"><a class="l-navbar__btn" href="https://www.youtube.com/channel/UC7xWU14_GGYKVqoSLg1M8EQ/feed" target="_blank"><i class="fab fa-youtube u-icon"></i></a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="o-burger l-navbar__burger --mobile" onclick="burgerCtrl(this)">
+        <div class="o-burger__wrap">
+          <div class="o-burger__line"></div>
+          <div class="o-burger__line"></div>
+          <div class="o-burger__line"></div>
+        </div>
+      </div>
+    </nav>
+    <header class="l-header-inner" data-aos="fade-down">
+            <div class="c-blockade l-header-inner__blockade">
+              <div class="c-blockade__line"><span class="c-blockade__text">台灣最生猛海派的音樂祭 ——『 大港開唱 』</span></div>
+              <div class="c-blockade__line"><span class="c-blockade__text">台灣最生猛海派的音樂祭 ——『 大港開唱 』</span></div>
+              <div class="c-blockade__line"><span class="c-blockade__text">台灣最生猛海派的音樂祭 ——『 大港開唱 』</span></div>
+              <div class="c-blockade__line"><span class="c-blockade__text">台灣最生猛海派的音樂祭 ——『 大港開唱 』</span></div>
+            </div>
+      <h2 class="u-title-lg l-header-inner__title">MAP</h2>
+    </header>
+    <main class="l-main">
+      <section class="l-map">
+        <div class="container">
+          <div class="l-map__wrap">
+            <iframe class="l-map__google" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3682.9061297135568!2d120.27933465080466!3d22.619980285085497!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e047620e1c45b%3A0xe6d6d1bd1c764df2!2z6aeB5LqM6Jed6KGT54m55Y2A!5e0!3m2!1szh-TW!2stw!4v1621531731204!5m2!1szh-TW!2stw" allowfullscreen="" loading="lazy"></iframe>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="l-footer" data-aos="fade" data-aos-offset="0">
+      <div class="o-gotop" onclick="lenis.scrollTo('body', { duration: 2 })">
+        <div class="o-gotop__arrow"><i class="fas fa-long-arrow-alt-up"></i></div>
+        <div class="o-gotop__text">TOP</div>
+      </div>
+      <div class="l-footer__date-mask" uk-parallax="bgy: 200"><img class="l-footer__img-date" src="img/footer/footer-date.svg" alt="大港開唱資訊"></div>
+      <div class="l-footer__menu">
+        <ul class="l-footer__btn-box">
+          <li class="l-footer__btn-wrap"><a class="l-footer__btn" href="##"><span class="l-footer__text --en u-ff-en">INFO</span><span class="l-footer__text --zh">相關資訊</span></a></li>
+          <li class="l-footer__btn-wrap"><a class="l-footer__btn" href="##"><span class="l-footer__text --en u-ff-en">NEWS</span><span class="l-footer__text --zh">最新消息</span></a></li>
+          <li class="l-footer__btn-wrap"><a class="l-footer__btn" href="##"><span class="l-footer__text --en u-ff-en">ARTISTS</span><span class="l-footer__text --zh">藝人名單</span></a></li>
+          <li class="l-footer__btn-wrap"><a class="l-footer__btn" href="##"><span class="l-footer__text --en u-ff-en">TIMETABLE</span><span class="l-footer__text --zh">節目表</span></a></li>
+          <li class="l-footer__btn-wrap"><a class="l-footer__btn" href="##"><span class="l-footer__text --en u-ff-en">TICKET</span><span class="l-footer__text --zh">購票資訊</span></a></li>
+          <li class="l-footer__btn-wrap"><a class="l-footer__btn" href="map.html"><span class="l-footer__text --en u-ff-en">MAP</span><span class="l-footer__text --zh">地圖導覽</span></a></li>
+        </ul>
+        <ul class="l-footer__link-box u-mt-20 u-mb-20">
+          <li class="l-footer__link-wrap"><a href="https://www.facebook.com//megaportfest/" target="_blank"><i class="fab fa-facebook u-icon"></i></a></li>
+          <li class="l-footer__link-wrap"><a href="https://www.instagram.com/megaportfest/" target="_blank"><i class="fab fa-instagram u-icon"></i></a></li>
+          <li class="l-footer__link-wrap"><a href="https://www.youtube.com/channel/UC7xWU14_GGYKVqoSLg1M8EQ/feed" target="_blank"><i class="fab fa-youtube u-icon"></i></a></li>
+        </ul>
+        <div class="u-text-sm">© 2023 Jarvis Course. All rights reserved.</div>
+      </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+    <script src="js/aos.js"></script>
+    <script>
+      // 想讓這個插件及時，所以寫在這初始化
+      AOS.init({
+        offset: 200,
+        duration: 1200,
+        once: false
+      });
+    </script>
+    <script src="js/lazyload.min.js"></script>
+    <script src="js/lenis.min.js"></script>
+    <script src="js/gsap.min.js"></script>
+    <script src="js/ScrollTrigger.min.js"></script>
+    <script src="js/main.min.js"></script>
+  </body>
+</html>

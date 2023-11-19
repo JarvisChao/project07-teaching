@@ -1,0 +1,66 @@
+.l-lineup
+  // 控制 sticky 空間
+  &::after
+    content: ''
+    display: block
+    +size(100%, 30rem)
+  &__sticky
+    position: sticky
+    position: -webkit-sticky
+    top: var(--space-120)
+  &__box
+    // 解決 parallax 滑鼠不能 hover 效果
+    pointer-events: auto !important
+  &__wrap
+    display: flex !important
+    // 解決 parallax 插件跑位
+    position: relative !important
+    &:first-child
+      justify-content: flex-end
+      align-items: flex-end
+    &:nth-child(4)
+      justify-content: center
+
+  &__artist
+    width: 100%
+    max-width: 45rem
+    filter: grayscale(100%)
+    transition: filter 0.3s
+    &:hover
+      filter: grayscale(0%)
+    &.--lg
+      max-width: 56rem
+
+  &__link
+    display: flex
+    flex-direction: column
+    &.--reverse
+      flex-direction: column-reverse
+
+  &__img-mask, &__glitch-mask
+    --img-w-ratio: 3
+    --img-h-ratio: 2
+    padding-bottom: calc(100% * var(--img-h-ratio) / var(--img-w-ratio))
+  &__glitch-mask
+    position: absolute
+    +size(100%)
+    left: 0
+    top: 0
+    mix-blend-mode: lighten
+    &::after
+      content: ''
+      display: block
+      position: absolute
+      +size(100%)
+      left: 0
+      top: 0
+      mix-blend-mode: multiply
+      z-index: 10
+    &.--primary::after
+      background-color: var(--color-primary)
+    &.--secondary::after
+      background-color: var(--color-secondary)
+    &.--primary
+      left: -10px
+    &.--secondary
+      left: 10px

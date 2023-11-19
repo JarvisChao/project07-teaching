@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;900&family=Roboto:wght@700;900&display=swap')
+  
+*
+  position: relative
+  box-sizing: border-box
+
+html
+  // 等於 10px
+  font-size: calc(16px / 1.6)
+  // 防止 Bootstrap 預設 smooth 影響 GoTop
+  // scroll-behavior: auto !important
+  +media(lg)
+    // 讓 1.6rem 變 15px
+    font-size: calc(15px / 1.6)
+  +media(ipad)
+    font-size: calc(14px / 1.6)
+
+html.lenis
+  height: auto
+.lenis
+  &.lenis-smooth
+    scroll-behavior: auto
+  &.lenis-smooth [data-lenis-prevent]
+    overscroll-behavior: contain
+  &.lenis-stopped
+    overflow: hidden
+  &.lenis-scrolling iframe
+    pointer-events: none
+
+body
+  margin: 0
+  background-color: var(--color-gray-mid)
+  font-family: var(--font-primary)
+  font-size: 1.6rem
+  font-weight: 400
+  -webkit-font-smoothing: antialiased
+  letter-spacing: 0.1rem
+  line-height: 1.7
+  color: var(--color-gray-light)
+  transition: background-color 0.8s
+  &.is-news-active
+    background-color: var(--color-primary)
+
+/* ----------------------------------- */
+/* ------ Reset ------ */
+/* ----------------------------------- */
+a, area, button, input, label, select, summary, textarea
+  // 防止按鈕雙點擊放大
+  -ms-touch-action: manipulation
+  touch-action: manipulation
+a, button
+  display: block
+  text-decoration: none
+  color: inherit
+  user-select: none
+  &:hover
+    text-decoration: none
+    color: inherit
+button
+  padding: 0
+  border: none
+  background: none
+img
+  max-width: 100%
+ul
+  list-style: none
+  padding: 0
+  margin: 0
+
+h1, h2, h3, h4, h5, h6, p, button
+  margin: 0
+  // 有些插件會覆蓋到，所以設定繼承 inherit 讓他吃我們自己的設置
+  font-family: inherit
+  font-size: inherit
+  font-weight: inherit
+  line-height: inherit
+  color: inherit
+h1, h2, h3, h4, h5, h6
+  font-weight: 500
+
+span
+  display: block
+  line-height: inherit
+
+/* ----------------------------------- */
+/* ------ Layouts ------ */
+/* ----------------------------------- */
+section
+  padding: var(--space-120) 4vw
+.container
+  max-width: 156rem
+  &.--left
+    max-width: calc(156rem + 8vw)
+    padding-left: 0
+    margin-left: 0
+.row
+  &.--gutter
+    --bs-gutter-x: var(--space-30)
+    --bs-gutter-y: var(--space-30)
